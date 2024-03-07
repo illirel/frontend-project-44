@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/illirel/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/illirel/frontend-project-44/actions)",
@@ -8,4 +9,4 @@
   },
   "author": "illirel",
   "license": "ISC"
-}
+  }
