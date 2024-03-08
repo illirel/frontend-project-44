@@ -1,7 +1,7 @@
 {
   "bin": {
-  "brain-games": "bin/brain-games.js"
-},
+    "brain-games": "bin/brain-games.js"
+  },
   "type": "module",
   "name": "@hexlet/code",
   "version": "1.0.0",
@@ -11,5 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "illirel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
+}
