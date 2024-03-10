@@ -2,7 +2,8 @@
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "games/brain-even.js",
-    "brain-calc": "games/brain-calc.js"
+    "brain-calc": "games/brain-calc.js",
+    "brain-gcd": "games/brain-gcd.js"
   },
   "type": "module",
   "name": "@hexlet/code",
