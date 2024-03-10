@@ -4,7 +4,7 @@ import readlineSync from 'readline-sync';
 
 
 
-function getRandomOperator() {
+  function getRandomOperator() {
   const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * operators.length);
   return operators[randomIndex];
@@ -12,7 +12,7 @@ function getRandomOperator() {
 
 
 
-function playCalc() {
+export function playCalc() {
 	const name = greetUser();
 	console.log('What is the result of the expression?')
 

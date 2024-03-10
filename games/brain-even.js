@@ -7,7 +7,7 @@ function isEven(num) {
 	return num % 2 === 0;
 }
 
-function playEvenGame(){
+export function playEvenGame(){
 	const name = greetUser();
 
 	console.log('Answer "yes" if the number is even, otherwise answer "no".');
