@@ -1,8 +1,15 @@
-
 import { greetUser } from '../src/cli.js';
 import readlineSync from 'readline-sync';
 
+function findGCD(num1, num2) {
+	while (num2 !== 0) {
+		let GCD = num2;
+		num2 = num1 % num2;
+		num1 = GCD;
+	}
 
+	return num1;
+}
 
 
 export function playGcd() {
@@ -16,18 +23,18 @@ export function playGcd() {
 		const randomNumber2 = Math.floor(Math.random() * 100) + 1;
 		console.log(`Question: ${randomNumber1} ${randomNumber2}`);
 		const userAnswer = readlineSync.question('Your answer: ');
-		const correctAnswer = 
+		const correctAnswer = findGCD(randomNumber1, randomNumber2);
 
 
-                if (userAnswer !== correctAnswer) {
-                        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correc>                        console.log(`Let's try again, ${name}!`);
+                if (userAnswer != correctAnswer) {
+                        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+                        console.log(`Let's try again, ${name}!`);
                         return;
                 }
 
-                console.log('Correct!');
+		console.log('Correct!');
                 correctAnswersCount += 1;
-        }
-
-        console.log(`Congratulations, ${name}!`);
+	}
+       console.log(`Congratulations, ${name}!`);
 }
 

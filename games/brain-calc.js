@@ -23,10 +23,10 @@ export function playCalc() {
 		const randomNumber2 = Math.floor(Math.random() * 100) + 1;
 		console.log(`Question: ${randomNumber1} ${operator} ${randomNumber2}`);
 		const userAnswer = readlineSync.question('Your answer: ');
-		const correctAnswer = (eval(`${randomNumber1} ${operator} ${randomNumber2}`)).toString();
+		const correctAnswer = eval(`${randomNumber1} ${operator} ${randomNumber2}`);
 
 
-		if (userAnswer !== correctAnswer) {
+		if (userAnswer != correctAnswer) {
 			console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
 			console.log(`Let's try again, ${name}!`);
 			return;
