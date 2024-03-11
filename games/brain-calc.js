@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { greetUser } from '../src/cli.js';
 import readlineSync from 'readline-sync';
 
@@ -39,4 +38,4 @@ export function playCalc() {
 
   	console.log(`Congratulations, ${name}!`);
 }
-playCalc();
+

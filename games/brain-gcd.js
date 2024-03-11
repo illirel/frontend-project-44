@@ -1,4 +1,4 @@
-  GNU nano 6.2                              games/brain-calc.js                                       #!/usr/bin/env node
+
 import { greetUser } from '../src/cli.js';
 import readlineSync from 'readline-sync';
 
@@ -12,7 +12,11 @@ export function playGcd() {
         let correctAnswersCount = 0;
 
         while (correctAnswersCount < 3) {
-                
+		const randomNumber1 = Math.floor(Math.random() * 100) + 1;
+		const randomNumber2 = Math.floor(Math.random() * 100) + 1;
+		console.log(`Question: ${randomNumber1} ${randomNumber2}`);
+		const userAnswer = readlineSync.question('Your answer: ');
+		const correctAnswer = 
 
 
                 if (userAnswer !== correctAnswer) {
@@ -26,4 +30,4 @@ export function playGcd() {
 
         console.log(`Congratulations, ${name}!`);
 }
-playGcd();
+
