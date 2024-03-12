@@ -23,8 +23,8 @@ function generateQuestions() {
 	let i = 0;
 	while (i < rounds) {
 		const operator = getRandomOperator();
-		const randomNumber1 = Math.floor(Math.random() * 100) + 1;
-		const randomNumber2 = Math.floor(Math.random() * 100) + 1;
+		const randomNumber1 = Math.floor(Math.random() * 11) + 1;
+		const randomNumber2 = Math.floor(Math.random() * 11) + 1;
 		questions.push([
 			`${randomNumber1} ${operator} ${randomNumber2}`,
 			result(randomNumber1, operator, randomNumber2).toString(),
@@ -38,5 +38,5 @@ function answer(question) {
 }
 
 export default function playCalc() {
-	runGames(description, generateQuestions, answer);
+	runGames(description, generateQuestions);
 }

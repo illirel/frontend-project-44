@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { greetUser } from './cli.js';
 
-const rounds = 4;
+const rounds = 3;
 
 function runGames(description, generateQuestions) {
 	const name = greetUser();

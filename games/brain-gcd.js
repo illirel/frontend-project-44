@@ -12,17 +12,12 @@ function findGCD(num1, num2) {
 	return num1;
 }
 
-function answer(question) {
-	const [num1, num2] = question.split(' ').map(Number);
-	return findGCD(num1, num2).toString();
-}
-
 function generateQuestions() {
 	let questions = [];
 	let i = 0;
 	while (i < rounds) {
-		const randomNumber1 = Math.floor(Math.random() * 100) + 1;
-		const randomNumber2 = Math.floor(Math.random() * 100) + 1;
+		const randomNumber1 = Math.floor(Math.random() * 10) + 1;
+		const randomNumber2 = Math.floor(Math.random() * 10) + 1;
 		questions.push([
 			`${randomNumber1} ${randomNumber2}`,
 			findGCD(randomNumber1, randomNumber2).toString(),
@@ -33,5 +28,5 @@ function generateQuestions() {
 }
 
 export default function playGcd() {
-	runGames(description, generateQuestions, answer);
+	runGames(description, generateQuestions);
 }

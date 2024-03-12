@@ -10,7 +10,7 @@ function generateQuestions() {
 	let questions = [];
 	let i = 0;
 	while (i < rounds) {
-		const randomNumber = Math.floor(Math.random() * 100) + 1;
+		const randomNumber = Math.floor(Math.random() * 10) + 1;
 		questions.push([randomNumber, isEven(randomNumber) ? 'yes' : 'no']);
 		i++;
 	}
