@@ -21,7 +21,7 @@ function randomProgression() {
 		num += randomStep;
 		j++;
 	}
-	return [array, result.toString()];
+	return [array.join(' '), result.toString()];
 }
 
 function generateQuestions() {
