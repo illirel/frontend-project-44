@@ -3,7 +3,7 @@ import { rounds, runGames } from '../src/index.js';
 const description = 'What number is missing in the progression?';
 
 function randomProgression() {
-	const randomLegth = Math.floor(Math.random() * 11) + 5;
+	const randomLegth = Math.floor(Math.random() * 11) + 6;
 	const randomIndex = Math.floor(Math.random() * (randomLegth + 1)) + 1;
 	const randomStep = Math.floor(Math.random() * 11) + 1;
 
