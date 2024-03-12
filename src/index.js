@@ -1,29 +1,33 @@
 import readlineSync from 'readline-sync';
 import { greetUser } from './cli.js';
 
-export default function runGames(description, generateQuestions, answer) {
-    const name = greetUser();
+const rounds = 4;
 
-    console.log(description);
+function runGames(description, generateQuestions) {
+	const name = greetUser();
 
-    let correctAnswerCount = 0;
+	console.log(description);
 
-    while (correctAnswerCount < 4) {
-        const question = generateQuestions();
-        console.log(`Question: ${question}`);
+	const question = generateQuestions();
 
-        const userAnswer = readlineSync.question('Your answer: ');
-        const correctAnswer = answer(question);
+	let correctAnswerCount = 0;
+	while (correctAnswerCount < question.length) {
+		console.log(`Question: ${question[correctAnswerCount][0]}`);
 
-        if (userAnswer !== correctAnswer) {
-            console.log(
-                `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
-            );
-            console.log(`Let's try again, ${name}!`);
-            return;
-        }
-        console.log(`Correct!`);
-        correctAnswerCount += 1;
-    }
-    console.log(`Congratulations, ${name}!`);
+		const userAnswer = readlineSync.question('Your answer: ');
+		const correctAnswer = question[correctAnswerCount][1];
+
+		if (userAnswer !== correctAnswer) {
+			console.log(
+				`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
+			);
+			console.log(`Let's try again, ${name}!`);
+			return;
+		}
+		console.log(`Correct!`);
+		correctAnswerCount += 1;
+	}
+	console.log(`Congratulations, ${name}!`);
 }
+
+export { rounds, runGames };

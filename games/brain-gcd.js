@@ -1,4 +1,6 @@
-import runGames from '../src/index.js';
+import { rounds, runGames } from '../src/index.js';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 function findGCD(num1, num2) {
 	while (num2 !== 0) {
@@ -10,18 +12,26 @@ function findGCD(num1, num2) {
 	return num1;
 }
 
-function generateQuestions() {
-	const randomNumber1 = Math.floor(Math.random() * 100) + 1;
-	const randomNumber2 = Math.floor(Math.random() * 100) + 1;
-	return `${randomNumber1} ${randomNumber2}`;
-}
-
 function answer(question) {
 	const [num1, num2] = question.split(' ').map(Number);
-	return (findGCD(num1, num2)).toString();
-}
-export default function playGcd() {
-        const description = 'Find the greatest common divisor of given numbers.';
- 	runGames(description, generateQuestions, answer);
+	return findGCD(num1, num2).toString();
 }
 
+function generateQuestions() {
+	let questions = [];
+	let i = 0;
+	while (i < rounds) {
+		const randomNumber1 = Math.floor(Math.random() * 100) + 1;
+		const randomNumber2 = Math.floor(Math.random() * 100) + 1;
+		questions.push([
+			`${randomNumber1} ${randomNumber2}`,
+			findGCD(randomNumber1, randomNumber2).toString(),
+		]);
+		i++;
+	}
+	return questions;
+}
+
+export default function playGcd() {
+	runGames(description, generateQuestions, answer);
+}

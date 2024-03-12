@@ -1,19 +1,22 @@
-import runGames from '../src/index.js';
+import { rounds, runGames } from '../src/index.js';
 
-function generateQuestions() {
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
-    return randomNumber;
-}
+const description =
+	'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(num) {
-    return num % 2 === 0;
+	return num % 2 === 0;
 }
-
-function answer(question) {
-    return isEven(question) ? 'yes' : 'no';
+function generateQuestions() {
+	let questions = [];
+	let i = 0;
+	while (i < rounds) {
+		const randomNumber = Math.floor(Math.random() * 100) + 1;
+		questions.push([randomNumber, isEven(randomNumber) ? 'yes' : 'no']);
+		i++;
+	}
+	return questions;
 }
 
 export default function playEvenGame() {
-    const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-    runGames(description, generateQuestions, answer);
+	runGames(description, generateQuestions);
 }
