@@ -4,11 +4,11 @@ const description = 'What number is missing in the progression?';
 
 function randomProgression() {
 	const randomLegth = Math.floor(Math.random() * 11) + 5;
-	const randomIndex = Math.floor(Math.random() * (randomLegth + 1));
+	const randomIndex = Math.floor(Math.random() * (randomLegth + 1)) + 1;
 	const randomStep = Math.floor(Math.random() * 11) + 1;
 
 	let array = [];
-	let j = 0;
+	let j = 1;
 	let num = randomStep;
 	let result = 0;
 	while (j < randomLegth) {
