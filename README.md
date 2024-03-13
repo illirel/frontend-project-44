@@ -2,7 +2,13 @@
 
 [![Actions Status](https://github.com/illirel/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/illirel/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/69daaa574429b055f429/maintainability)](https://codeclimate.com/github/illirel/frontend-project-44/maintainability)
-// Вызов функции запуска игр:
+
+// Инструкция по установке проекта:
+
+1. Клонируйте данный.
+2. В дирекктории проекта выполните команду "install" для установки зависимостей для данного каталога.
+
+// Команды для запуска игр:
 
 1. brain-even - Четное число или нет?
    [![asciicast](https://asciinema.org/a/PqHTxZGIhRe7HgKeKDI8wd6Tk.svg)](https://asciinema.org/a/PqHTxZGIhRe7HgKeKDI8wd6Tk)
