@@ -4,9 +4,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/69daaa574429b055f429/maintainability)](https://codeclimate.com/github/illirel/frontend-project-44/maintainability)
 // Вызов функции запуска игр:
 
-1. brain-even - Четное число или нет?.
+1. brain-even - Четное число или нет?
+   [![asciicast](https://asciinema.org/a/PqHTxZGIhRe7HgKeKDI8wd6Tk.svg)](https://asciinema.org/a/PqHTxZGIhRe7HgKeKDI8wd6Tk)
 2. brain-calc - Калькулятор.
-   [![asciicast](https://asciinema.org/a/6mPXuVTFQQj8AipfqbaagWzks.svg)](https://asciinema.org/a/6mPXuVTFQQj8AipfqbaagWzks)
-3. brain-prime - Простое число или нет.
+   [![asciicast](https://asciinema.org/a/htGBUpDbjZtVo75hE6RjSkJSI.svg)](https://asciinema.org/a/htGBUpDbjZtVo75hE6RjSkJSI)
+3. brain-prime - Простое число или нет?
+   [![asciicast](https://asciinema.org/a/eLcfOtavVe4KchO5G05lQBePR.svg)](https://asciinema.org/a/eLcfOtavVe4KchO5G05lQBePR)
 4. brain-progression - Вычисли недостающий элемент прогресии.
+   [![asciicast](https://asciinema.org/a/W1DM77WvuUrgl7MzAzk3JQvKZ.svg)](https://asciinema.org/a/W1DM77WvuUrgl7MzAzk3JQvKZ)
 5. brain-gcd - Вычисли наибольший общий делитель.
+   [![asciicast](https://asciinema.org/a/fNUY2Hd60CMk2hnR0jfgiEB7Z.svg)](https://asciinema.org/a/fNUY2Hd60CMk2hnR0jfgiEB7Z)
