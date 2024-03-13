@@ -1,11 +1,12 @@
-import { rounds, runGames } from '../src/index.js';
+import { rounds, runGames } from '../index.js';
+import randomNum from '../Utils.js';
 
 const description = 'What number is missing in the progression?';
 
-function randomProgression() {
-  const randomLegth = Math.floor(Math.random() * 11) + 6;
-  const randomIndex = Math.floor(Math.random() * randomLegth);
-  const randomStep = Math.floor(Math.random() * 11) + 1;
+function randomQuestion() {
+  const randomLegth = randomNum(11, 6);
+  const randomIndex = randomNum(randomLegth, 0);
+  const randomStep = randomNum(11, 1);
 
   const array = [];
   let j = 0;
@@ -26,10 +27,8 @@ function randomProgression() {
 
 function generateQuestions() {
   const questions = [];
-  let i = 0;
-  while (i < rounds) {
-    questions.push(randomProgression());
-    i += 1;
+  for (let i = 0; i < rounds; i += 1) {
+    questions.push(randomQuestion());
   }
   return questions;
 }

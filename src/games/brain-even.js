@@ -1,17 +1,21 @@
-import { rounds, runGames } from '../src/index.js';
+import { rounds, runGames } from '../index.js';
+import randomNum from '../Utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(num) {
   return num % 2 === 0;
 }
+
+function randomQuestion() {
+  const randomNumber = randomNum(11, 1);
+  return [randomNumber, isEven(randomNumber) ? 'yes' : 'no'];
+}
+
 function generateQuestions() {
   const questions = [];
-  let i = 0;
-  while (i < rounds) {
-    const randomNumber = Math.floor(Math.random() * 10) + 1;
-    questions.push([randomNumber, isEven(randomNumber) ? 'yes' : 'no']);
-    i += 1;
+  for (let i = 0; i < rounds; i += 1) {
+    questions.push(randomQuestion());
   }
   return questions;
 }
